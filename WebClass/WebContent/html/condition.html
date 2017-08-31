@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Condition</title>
+		
+		<style>
+			input {
+				margin-right:3px;
+			}
+		</style>
+		
+		<script>
+			function check() {
+				var age = document.getElementById("num1").value;
+				var weight = document.getElementById("num2").value;
+				if(age >= 16 && age <= 69) {
+					if(document.getElementById("male").checked) {
+						if(weight >= 50) document.getElementById("result").innerHTML = "헌혈 가능";
+						else document.getElementById("result").innerHTML = "몸무게 미달";
+					} else {
+						if(weight >= 45) document.getElementById("result").innerHTML = "헌혈 가능";
+						else document.getElementById("result").innerHTML = "몸무게 미달";
+					}
+				} else document.getElementById("result").innerHTML = "연령 부적합";
+				
+			}
+		</script>
+	</head>
+	<body style="font-family: '인터파크고딕'">
+		<h1>헌혈 조건</h1>
+		<hr>
+		<form>
+			<p>나이 : <input type="text" id="num1" size="5">세</p> 
+			<p>성별 : 남<input type="radio" name="gender" id="male" checked>
+			 여<input type="radio" name="gender" id="female"></p> 
+			<p>몸무게 : <input type="text" id="num2" size="5">kg</p>
+			<input type="button" onclick="check()" value="헌혈 조건 체크">
+		</form>
+		<p id="result"></p>
+	</body>
+</html>

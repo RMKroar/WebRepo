@@ -1,0 +1,28 @@
+@CHARSET "utf-8";
+
+* {
+	color:blue;
+	text-align:center;
+}
+
+h1 {
+	border:2px solid black;
+	background-color:yellow;
+}
+
+h3 {
+	text-align:right;
+	color:tomato;
+}
+			
+h1, h3 {
+	text-decoration:underline;
+}
+			
+#t1 {
+	font-weight:bold;
+}
+			
+.t {
+	font-style:italic;
+}

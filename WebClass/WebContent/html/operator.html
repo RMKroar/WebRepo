@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Operator</title>
+		
+		<script>
+			function add() {
+				var a = document.getElementById("num1").value;
+				var b = document.getElementById("num2").value;
+				document.getElementById("result").value = Number(a) + Number(b);
+			}
+		</script>
+	</head>
+	<body style="font-family: '인터파크고딕'">
+		<form>
+			<input type="text" id="num1" size="5"> +
+			<input type="text" id="num2" size="5"> =
+			<input type="text" id="result" size="5">
+			<input type="button" onclick="add()" value="Calculate">
+		</form>
+	</body>
+</html>

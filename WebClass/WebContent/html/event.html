@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>EVENT</title>
+		
+		<style>
+			.BGaquamarine { background-color: aquamarine; }
+			.BGtomato { background-color: tomato; }
+			.BGwhite { background-color: white; }
+			.border { border : 3px solid red; }
+		</style>
+		
+		<script>
+			function changeColor(col) {
+				var element = document.getElementById("container");
+				if(col == 'aquamarine') element.setAttribute("class", "BGaquamarine");
+				else if(col == 'tomato') element.setAttribute("class", "BGtomato");
+				else element.setAttribute("class", "BGwhite");
+			}
+			
+			function toUpperCase(text) {
+				text.value = text.value.toUpperCase();
+			}
+			
+			function changeBorder(box, check) {
+				if(check) box.setAttribute("class", "border");
+				else box.removeAttribute("class");
+			}
+		</script>
+	</head>
+	<body onload="alert('WebPage Loaded')" style="font-family:'인터파크고딕'">
+		<div id="container" style="background-color:white; margin:3%">
+			<input type="radio" name="color" onclick="changeColor('aquamarine');"> Aquamarine
+			<input type="radio" name="color" onclick="changeColor('tomato');"> Tomato
+			<input type="radio" name="color" onclick="changeColor('white');"> Refresh 
+			<br>
+			<p> <input type="text" id="word" onchange="toUpperCase(this);"> </p>
+			
+			<div id="box" onmouseover="changeBorder(this, true);" onmouseout="changeBorder(this, false);">
+			Please put your mouse on the box!
+			</div>
+			
+		</div>
+	</body>
+</html>
