@@ -43,12 +43,12 @@
 	    	%>
 		    <form class="form-inline my-2 my-lg-0" id="loginForm" action="/WebClass/bloglogin" method="post">
 		      <input class="form-control mr-sm-2" type="text" placeholder="ID" aria-label="ID" id="id" name="id" value="<%=id%>" required >
-		      <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password" id="pw" name="pwd" value="<%=pwd%>" required >
+		      <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password" id="pw" name="pwd" required >
 		      <button class="btn btn-outline-success md-2 md-sm-0" type="submit">Login</button>
 		    </form>
 		    <% } else { %>
 		    
-		    <div style="color:white; margin-right: 2%"><%=user.getId()%>님, 환영합니다!</div>    
+		    <div style="color:white; margin-right: 2%"><%=user.getName()%>님, 환영합니다!</div>    
 		    <form class="form-inline my-2 my-lg-0" action="/WebClass/bloglogout" method="post">
 		      <button class="btn btn-outline-success md-2 md-sm-0" type="submit">Logout</button>
 		    </form>

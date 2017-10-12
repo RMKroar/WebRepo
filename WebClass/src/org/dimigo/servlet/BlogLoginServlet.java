@@ -50,6 +50,7 @@ public class BlogLoginServlet extends HttpServlet {
 			HttpSession session = request.getSession();
 			UserVO user = new UserVO();
 			user.setId(id);
+			user.setName("»ç¿ëÀÚA");
 			
 			session.setAttribute("user", user);
 		} else {
